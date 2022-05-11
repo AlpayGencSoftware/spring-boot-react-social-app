@@ -4,6 +4,12 @@ import "./index.css";
 import "./bootstrap_override.scss";  
 import './i18n';
 import App from "./container/App";
+import AuthenticationContext from "./shared/AuthenticationContext";
+
+ReactDOM.render(
+<AuthenticationContext>
+    <App />
+</AuthenticationContext>
 
 
-ReactDOM.render(<App />, document.getElementById("root"));
+, document.getElementById("root"));

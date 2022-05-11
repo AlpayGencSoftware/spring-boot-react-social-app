@@ -7,7 +7,7 @@ import { withTranslation } from "react-i18next";
 class TopBar extends Component {
  
   render() {
-      const { t , isLoggedIn, username} = this.props; 
+      const { t , isLoggedIn, username, onLogoutSuccess} = this.props; 
       let links=(
         <ul className="navbar-nav ml-auto">
                 <li>
@@ -27,7 +27,7 @@ class TopBar extends Component {
                {username} 
              </Link> 
             </li>
-          <li className="nav-link">
+          <li className="nav-link" onClick={onLogoutSuccess}>
               {t('Logout')}
           </li> 
     </ul>

@@ -12,9 +12,7 @@ import {
 } from "react-router-dom";
 import TopBar from "../components/TopBar";
 
-class App extends React.Component {
-
-
+class App extends React.Component {  
   render() {
    const isLoggedIn=false;
    const username= undefined;
@@ -28,14 +26,7 @@ class App extends React.Component {
             {!isLoggedIn && (
               <Route
                 path="/login"
-                component={(props) => {
-                  return (
-                    <LoginPage
-                      {...props}
-                      onLoginSuccess={this.onLoginSuccess}
-                    />
-                  );
-                }}
+                component={LoginPage}
               />
             )}
             <Route path="/signup" component={UserSignUpPage} />

@@ -5,4 +5,5 @@ import "./bootstrap_override.scss";
 import './i18n';
 import App from "./container/App";
 
+
 ReactDOM.render(<App />, document.getElementById("root"));

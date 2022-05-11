@@ -33,7 +33,7 @@ export function withApiProgress(WrappedComponent, apiPath){
 
      componentWillUnmount(){
         axios.interceptors.request.eject(this.requestInterceptor );
-        axios.interceptors.eject(this.response.interceptor);
+        axios.interceptors.response.eject(this.responseInterceptor);
      }
   
     updateApiCallFor=(url, inProgress)=>{

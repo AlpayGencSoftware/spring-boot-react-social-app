@@ -18,7 +18,7 @@ class TopBar extends Component {
                     <Link className="nav-link"  to="/login" >{t('Login')}</Link>
                 </li>
                 <li>
-                <Link className="nav-link"  to="/signup">{t('Sign Up')}</Link>  
+                   <Link className="nav-link"  to="/signup">{t('Sign Up')}</Link>  
                 </li>
           </ul>
         </nav>

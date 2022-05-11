@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 
-function getDisplayname(WrappedComponent){
- 
- 
+function getDisplayname(WrappedComponent){ 
   return WrappedComponent.displayName || WrappedComponent.name || 'Component';
 }
 
@@ -18,8 +16,8 @@ export function withApiProgress(WrappedComponent, apiPath){
   
     componentDidMount() { 
       this.requestInterceptor = axios.interceptors.request.use((request) => { 
-        this.updateApiCallFor(request.url, true);
-        return request;
+          this.updateApiCallFor(request.url, true);
+          return request;
       }); 
       this.requestInterceptor = axios.interceptors.response.use(
         (response) => {
@@ -27,8 +25,7 @@ export function withApiProgress(WrappedComponent, apiPath){
           return response;
         },
         (error) => {
-          this.updateApiCallFor(error.config.url, false);
-        
+          this.updateApiCallFor(error.config.url, false); 
           throw error;
         }
       );

@@ -11,12 +11,12 @@ import {
   Switch,
 } from "react-router-dom";
 import TopBar from "../components/TopBar";
+//import Authentication from "../shared/AuthenticationContext";
 
 class App extends React.Component {  
+ // static contextType=Authentication;
   render() {
-   const isLoggedIn=false;
-   const username= undefined;
-    //const { isLoggedIn, username } = this.state;
+   const isLoggedIn=false; 
     return (
       <div>
         <Router>
@@ -30,9 +30,7 @@ class App extends React.Component {
               />
             )}
             <Route path="/signup" component={UserSignUpPage} />
-            <Route path="/user/:username" component={props=>{
-              return <UserPage {...props} username={username}/>
-            }} />
+            <Route path="/user/:username" component={UserPage} />
             <Redirect to="/404" />
           </Switch>
         </Router>

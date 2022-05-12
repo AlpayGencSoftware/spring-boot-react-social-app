@@ -6,8 +6,8 @@ export const signUp = (body) => {
   });
 };
 
-export const login = (creds) => {
-  return axios.post("api/1.0/auth", creds);
+export const login = creds => {
+  return axios.post('/api/1.0/auth', {}, { auth: creds });
 };
 
 export const changeLanguage = (language) => {
